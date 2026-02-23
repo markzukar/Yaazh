@@ -1,33 +1,134 @@
 .carousel-control-next-icon {
-    background-image: url(./img/carrightarrow.png);
+  background-image: url(./img/carrightarrow.png);
 }
 
 
 .carousel-control-prev-icon {
-    background-image: url(./img/careftarrow-50.png);
+  background-image: url(./img/careftarrow-50.png);
 }
 
 .error-message {
-    color: red;
+  color: red;
 }
 
-.inter{
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.chivo{
-    font-family: "Chivo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+.chivo {
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.space-grotesk{
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-  }
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* arrow animation */
+.app-button {
+  padding: 10px 0;
+  padding-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+}
+
+.app-button-arrow {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.app-button-text {
+  padding-left: 35px;
+  color: #2b292a;
+  font-size: 1.5rem;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.app-button-arrow:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #2b292a;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.app-button-arrow:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #2b292a;
+  border-radius: 50%;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.3s;
+}
+
+.app-button:hover .app-button-arrow:after {
+  border-radius: 0;
+  -ms-transform: translateY(-50%) rotate(135deg);
+  -webkit-transform: translateY(-50%) rotate(135deg);
+  -moz-transform: translateY(-50%) rotate(135deg);
+  -o-transform: translateY(-50%) rotate(135deg);
+  transform: translateY(-50%) rotate(135deg);
+  border-right: 0;
+  border-bottom: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.app-button:hover .app-button-arrow:before {
+  left: 24px;
+}
+
+.app-button:hover .app-button-text {
+  padding-left: 45px;
+}
+
+
+
+
+
+
+
+
+
+/* dropdown */

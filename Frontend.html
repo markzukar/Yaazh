@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chivo&family=Inter:opsz@14..32&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            prefix: 'tw-',
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header - nav bar -->
+    <div w3-include-html="../Header.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
+
+    <!-- main -->
+    <main class="tw-pt-28 md:tw-pt-40 tw-pb-10 md:tw-pb-16">
+        <section class="tw-mx-auto tw-w-[90%] tw-flex tw-items-center tw-gap-x-4">
+            <a href="./Careers.html"><img src="./img/careers/left-arrow.png" class="tw-w-10 md:tw-w-auto" alt=""></a>
+            <p class="tw-text-4xl lg:tw-text-5xl space-grotesk tw-font-bold">Web Frontend Developer</p>
+        </section>
+
+        <section class="tw-px-5 tw-ml-10  md:tw-px-0 md:tw-mx-auto md:tw-w-[70%] lg:tw-w-[80%]  tw-mt-3">
+
+            <ul class="tw-list-disc tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">
+                <li class="tw-py-2">Strong proficiency with HTML, CSS, JavaScript with current best practices</li>
+                <li class="tw-py-2">Strong experience in React.js is a must</li>
+                <li class="tw-py-2">Experience with flux based store</li>
+                <li class="tw-py-2">Implement product features writing clean, robust, reusable code with tests</li>
+                <li class="tw-py-2">Proficient understanding of code versioning tools(GIT)</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- write email -->
+    <main class="tw-flex tw-justify-center tw-items-center tw-gap-x-5 tw-my-10">
+        <p class="tw-text-2xl">Write to us at: </p>
+        <button
+            class="tw-border tw-border-[#4a51e0] tw-text-[#4a51e0] tw-px-3 tw-py-2 hover:tw-text-white hover:tw-bg-[#4a51e0] tw-duration-300">
+            hr@yaazh.in</button>
+    </main>
+
+
+    <!-- Footer -->
+    <div w3-include-html="Footer.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
+
+</body>
+
+</html>

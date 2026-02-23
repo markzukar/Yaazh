@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chivo&family=Inter:opsz@14..32&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            prefix: 'tw-',
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- nav bar -->
+    <div w3-include-html="Header.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
+
+
+    <!-- home -->
+    <main>
+        <!-- title -->
+        <section
+            class=" tw-w-full md:tw-h-screen md:tw-min-h-full tw-flex tw-pt-48 tw-pb-32 md:tw-pt-6 tw-relative tw-overflow-hidden tw-bg-transparent tw-items-center">
+
+            <div
+                class="tw-absolute tw-top-0 tw-w-full tw-h-full tw-object-cover tw-saturate-0 tw-brightness-110 tw-blur-[6px] tw-shadow-inner tw-shadow-white">
+                <img src="./img/careers/service-img2.PNG" class="tw-w-full tw-object-cover " alt="">
+            </div>
+
+            <div class="  tw-z-20  tw-w-full">
+                <h1 class="tw-text-4xl lg:tw-text-5xl tw-font-bold space-grotesk tw-text-center ">
+                    Careers at Yaazh
+                </h1>
+            </div>
+        </section>
+
+
+        <!-- Build your passion and career with us -->
+        <section class="tw-px-5 lg:tw-px-0 lg:tw-w-[90%] xl:tw-w-[80%] tw-mx-auto">
+
+            <p class='tw-text-4xl lg:tw-text-5xl space-grotesk tw-font-extrabold tw-text-center '>
+                Build your passion and career with us
+            </p>
+
+            <div class='tw-mb-[4rem] tw-flex tw-flex-col md:tw-flex-row tw-justify-center tw-items-center tw-gap-10'>
+                <p class='tw-mt-10 tw-text-[#7F787C] md:tw-mt-[5rem] tw-text-xl md:tw-text-[1.5rem] tw-text-justify'>
+                    If you are smart, curious, driven and creative, then you will fit right in with us. Check out
+                    our open positions and send us your resume.
+                </p>
+                <img class='tw-mt-[4rem] tw-ml-10' src='./img/careers/careers_header.png' />
+            </div>
+
+        </section>
+
+        <!-- intern with us -->
+        <section class="tw-px-5 lg:tw-px-0 lg:tw-w-[90%] xl:tw-w-[70%] tw-mx-auto tw-mb-20">
+            <p class='tw-text-4xl lg:tw-text-5xl space-grotesk tw-font-extrabold'>
+                Intern with us
+            </p>
+
+            <main class="tw-flex tw-items-center tw-justify-between md:tw-w-[90%] lg:tw-w-[70%] ">
+                <div class='tw-text-2xl md:tw-text-3xl tw-mt-7 lg:tw-ml-7 tw-text-[#424246]   '>
+                    <p class="chivo tw-text-[#7F787C]"> <a href="./Internship.html">Internship</a> </p>
+                    <p class=" tw-mt-2 tw-text-base tw-text-[#85858c]">
+                        Full time 0+ years Experience
+                    </p>
+                </div>
+
+                <a href="./Internship.html" class="app-button">
+                    <div class="app-button-arrow"></div>
+                    <div class="app-button-text"> Apply </div>
+                </a>
+
+
+            </main>
+        </section>
+
+
+
+
+        <!--Join our team -->
+        <section class="tw-px-5 lg:tw-px-0 lg:tw-w-[90%] xl:tw-w-[70%] tw-mx-auto tw-mb-40">
+            <p class='tw-text-4xl lg:tw-text-5xl space-grotesk tw-font-extrabold '>
+                Join our team
+            </p>
+
+            <main class="tw-flex tw-items-center tw-justify-between md:tw-w-[90%] lg:tw-w-[70%] ">
+                <div class='tw-w-[60%] sm:tw-w-auto tw-text-2xl md:tw-text-3xl tw-mt-7 lg:tw-ml-7 tw-text-[#424246]   '>
+                    <p class="chivo tw-text-[#7F787C]"><a href="./IOSDeveloper.html">iOS Developer</a> </p>
+                    <p class=" tw-mt-2 tw-text-base tw-text-[#85858c]">
+                        Full time 6+ years Experience
+                    </p>
+                </div>
+
+                <a href="./IOSDeveloper.html" class="app-button">
+                    <div class="app-button-arrow"></div>
+                    <div class="app-button-text"> Apply </div>
+                </a>
+
+            </main>
+
+            <main class="tw-flex tw-items-center tw-justify-between md:tw-w-[90%] lg:tw-w-[70%] ">
+                <div class='tw-w-[60%] sm:tw-w-auto tw-text-2xl md:tw-text-3xl tw-mt-7 lg:tw-ml-7 tw-text-[#424246]   '>
+                    <p class="chivo tw-text-[#7F787C]"><a href="./AndroidDeveloper.html">Android Developer</a> </p>
+                    <p class=" tw-mt-2 tw-text-base tw-text-[#85858c]">
+                        Full time 6+ years Experience
+                    </p>
+                </div>
+
+                <a href="./AndroidDeveloper.html" class="app-button">
+                    <div class="app-button-arrow"></div>
+                    <div class="app-button-text"> Apply </div>
+                </a>
+
+            </main>
+
+            <main class="tw-flex tw-items-center tw-justify-between md:tw-w-[90%] lg:tw-w-[70%] ">
+                <div class='tw-w-[60%] sm:tw-w-auto tw-text-2xl md:tw-text-3xl tw-mt-7 lg:tw-ml-7 tw-text-[#424246]   '>
+                    <p class="chivo tw-text-[#7F787C]"><a href="./FullStack.html">Fullstack Developer</a> </p>
+                    <p class=" tw-mt-2 tw-text-base tw-text-[#85858c]">
+                        Full time 6+ years Experience
+                    </p>
+                </div>
+
+                <a href="./FullStack.html" class="app-button">
+                    <div class="app-button-arrow"></div>
+                    <div class="app-button-text"> Apply </div>
+                </a>
+
+            </main>
+
+            <main class="tw-flex tw-items-center tw-justify-between  md:tw-w-[90%] lg:tw-w-[70%] ">
+                <div class='tw-w-[60%] sm:tw-w-auto tw-text-2xl md:tw-text-3xl tw-mt-7 lg:tw-ml-7 tw-text-[#424246]   '>
+                    <p class="chivo tw-text-[#7F787C]"><a href="./Frontend.html"> Web Frontend Developer</a> </p>
+                    <p class=" tw-mt-2 tw-text-base tw-text-[#85858c]">
+                        Full time 6+ years Experience
+                    </p>
+                </div>
+
+                <a href="./Frontend.html" class="app-button">
+                    <div class="app-button-arrow"></div>
+                    <div class="app-button-text"> Apply </div>
+                </a>
+
+            </main>
+
+            <main class="tw-flex tw-items-center tw-justify-between md:tw-w-[90%] lg:tw-w-[70%] ">
+                <div class='tw-w-[60%] sm:tw-w-auto tw-text-2xl md:tw-text-3xl tw-mt-7 lg:tw-ml-7 tw-text-[#424246]   '>
+                    <p class="chivo tw-text-[#7F787C]"><a href="./Backend.html">Backend Developer</a> </p>
+                    <p class=" tw-mt-2 tw-text-base tw-text-[#85858c]">
+                        Full time 6+ years Experience
+                    </p>
+                </div>
+
+                <a href="./Backend.html" class="app-button">
+                    <div class="app-button-arrow"></div>
+                    <div class="app-button-text"> Apply </div>
+                </a>
+
+            </main>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <div w3-include-html="Footer.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
+
+</body>
+
+</html>

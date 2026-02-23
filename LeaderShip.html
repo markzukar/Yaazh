@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chivo&family=Inter:opsz@14..32&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./ArrowAmination.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            prefix: 'tw-',
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header - nav bar -->
+    <div w3-include-html="../Header.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
+
+    <!-- main -->
+
+    <section
+        class="lg:tw-pb-32  md:tw-pt-6 tw-w-full xl:tw-h-screen tw-min-h-full tw-flex tw-relative tw-overflow-hidden tw-bg-transparent md:tw-items-center">
+
+        <div
+            class="tw-absolute tw-top-0 tw-w-full tw-h-full tw-object-cover tw-filter tw-saturate-0 tw-brightness-[3.5] tw-blur-sm tw-shadow-[inset_0px_0px_34px_42px_rgba(255,255,255,1)]">
+            <img src="./img/OurTeam/page-cover.png" class="tw-pt-16 md:tw-pt-0" alt="">
+        </div>
+
+        <main class=" tw-mt-20 tw-py-20  lg:tw-mt-64  tw-z-20  md:tw-w-[70%] tw-mx-auto">
+            <h1 class="tw-text-3xl lg:tw-text-7xl space-grotesk tw-font-extrabold tw-text-center ">
+                Leadership is influence.
+            </h1>
+            <div class="tw-flex tw-justify-center ">
+                <h3 class="tw-mt-5  tw-text-[#464143] tw-text-xl md:tw-text-3xl tw-text-justify">
+                    - John C. Maxwell
+                </h3>
+            </div>
+        </main>
+
+    </section>
+
+    <!-- We are all making a difference here -->
+    <section class="tw-px-5 lg:tw-px-0 md:tw-w-[90%] xl:tw-w-[60%] tw-my-10 tw-mx-auto">
+
+        <p class='tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-center'>
+            Meet out leadership team
+        </p>
+
+        <!-- Athi Narayanan K -->
+        <div
+            class="tw-flex tw-flex-col tw-items-center lg:tw-items-start lg:tw-flex-row tw-mt-10 md:tw-mt-20 tw-border-b tw-border-black tw-pb-10">
+            <div class="tw-w-[60%] sm:tw-w-[40%] lg:tw-w-[180%]">
+                <img src="./img/yaazh/ceo.jpg" />
+            </div>
+
+            <div class="tw-w-[16%] tw-hidden lg:tw-inline"></div>
+
+            <div class="tw-justify-start lg:tw-w-[220%] tw-mt-10">
+                <h3 class="tw-mt-0 tw-text-[#464143] tw-text-3xl tw-font-extrabold tw-text-justify">
+                    Arun Kannan
+                </h3>
+                <h3 class="tw-mt-2 tw-text-[#464143] tw-text-xl tw-text-justify tw-justify-center">
+                    CEO
+                </h3>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">Like his father, Arun Kannan is a
+                    born entrepreneur who created Yaazh Studio. He believes that
+                    education should produce good human beings rather than robots. After completing his B.Tech in PSNA
+                    College of Engineering and Technology, Arun decided that he would start Yaazh studio and will take
+                    on the challenges and change the world. His friends know him as a preserverent articulator and a
+                    dreamer who possess a can-do attitude.</p>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">His motto :<span
+                        class="tw-font-light"> “A True leader
+                        always inspires and takes the team forward towards the goal”.</span></p>
+            </div>
+
+        </div>
+
+        <!-- Arun Kannan -->
+        <div
+            class="tw-flex tw-flex-col tw-items-center lg:tw-items-start lg:tw-flex-row tw-mt-10 md:tw-mt-20 tw-border-b tw-border-black tw-pb-10">
+            <div class="tw-justify-start lg:tw-w-[220%] tw-mt-10 tw-order-2">
+                <h3 class="tw-mt-0 tw-text-[#464143] tw-text-3xl tw-font-extrabold tw-text-justify">
+                    Visal
+                </h3>
+                <h3 class="tw-mt-2 tw-text-[#464143] tw-text-xl tw-text-justify tw-justify-center">
+                    Sales Director
+                </h3>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">Vishal is a Sales Director with over
+                    8
+                    years of experience driving revenue growth and building partnerships with both startups and Fortune
+                    500 companies across the globe. With a talent for crafting tailored strategies that meet diverse
+                    business needs, Alex has a proven track record of leading high-performing sales teams. His ability
+                    to navigate complex markets and deliver exceptional results makes him a vital part of the leadership
+                    team at Yaazh.</p>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]"> His motto:<span
+                        class="tw-font-light"> "Sales isn’t just about
+                        closing deals, it’s about building lasting relationships that create value for both
+                        sides"</span>
+                </p>
+            </div>
+
+            <div class="tw-w-[16%] tw-hidden lg:tw-inline"></div>
+
+            <div class="tw-w-[60%] sm:tw-w-[40%] lg:tw-w-[180%] lg:tw-order-2">
+                <img src="./img/yaazh/vishal.png" />
+            </div>
+
+        </div>
+
+        <!-- Moshe -->
+        <div
+            class="tw-flex tw-flex-col tw-items-center lg:tw-items-start lg:tw-flex-row tw-mt-10 md:tw-mt-20 tw-border-b tw-border-black tw-pb-10">
+            <div class="tw-w-[60%] sm:tw-w-[40%] lg:tw-w-[180%]">
+                <img src="./img/yaazh/Moshe2.jpg" />
+            </div>
+
+            <div class="tw-w-[16%] tw-hidden lg:tw-inline"></div>
+
+            <div class="tw-justify-start lg:tw-w-[220%] tw-mt-10">
+                <h3 class="tw-mt-0 tw-text-[#464143] tw-text-3xl tw-font-extrabold tw-text-justify">
+                    Moshe Jacob
+                </h3>
+                <h3 class="tw-mt-2 tw-text-[#464143] tw-text-xl tw-text-justify tw-justify-center">
+                    Team Leader in Israel
+                </h3>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">Moshe, Our Captain incharge in
+                    Israel . He takes care of representing Yaazh worldwide . He believes
+                    that the technology can be human's best friend once it starts to observe us. Moshe has extensive
+                    experience in all kind of environments, as windows software, client/server solutions and app
+                    (Android and iOS). Moshe can help support and mediate between Yaazh software studio and any client
+                    in Israel or worldwide. His experience, understanding and knowledge will bridge on any
+                    client/developer gap, make it easy to get to the requested product.</p>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]"> His motto : “Persistance and
+                    beleiving in the right process are the two key aspects of success”</p>
+            </div>
+
+        </div>
+
+        <!-- Aparna -->
+        <div
+            class="tw-flex tw-flex-col tw-items-center lg:tw-items-start lg:tw-flex-row tw-mt-10 md:tw-mt-20 tw-border-b tw-border-black tw-pb-10">
+            <div class="tw-justify-start lg:tw-w-[220%] tw-mt-10 tw-order-2 ">
+                <h3 class="tw-mt-0 tw-text-[#464143] tw-text-3xl tw-font-extrabold tw-text-justify">
+                    Aparna
+                </h3>
+                <h3 class="tw-mt-2 tw-text-[#464143] tw-text-xl tw-text-justify tw-justify-center">
+                    UI/UX Designer & Support Team Leader
+                </h3>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">A born artist, Aparna is a B.Tech
+                    graduate who loves fun and manages to integrate it into work in all
+                    possible ways. She never takes no for an answer and confronts a situation or an issue with a
+                    positive attitude. Apart from designing aesthetic screens and workflows, she also handles the 24/7
+                    support team and is a valued member at Yaazh studio.</p>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]"> Her motto :<span
+                        class="tw-font-light"> “Creativity is not
+                        something with which you're born rather than it needs to be
+                        developed”</span>
+                </p>
+            </div>
+
+            <div class="tw-w-[16%] tw-hidden lg:tw-inline"></div>
+
+            <div class="tw-w-[60%] sm:tw-w-[40%] lg:tw-w-[180%] lg:tw-order-2">
+                <img src="./img/yaazh/ui_ux_designer.jpg" />
+            </div>
+
+        </div>
+
+
+        <!--  Senthil Chandran -->
+        <div
+            class="tw-flex tw-flex-col tw-items-center lg:tw-items-start lg:tw-flex-row tw-mt-10 md:tw-mt-20 tw-border-b tw-border-black tw-pb-10">
+            <div class="tw-w-[60%] sm:tw-w-[40%] lg:tw-w-[180%]">
+                <img src="./img/yaazh/senvel.jpeg" />
+            </div>
+
+            <div class="tw-w-[16%] tw-hidden lg:tw-inline"></div>
+
+            <div class="tw-justify-start lg:tw-w-[220%] tw-mt-10">
+                <h3 class="tw-mt-0 tw-text-[#464143] tw-text-3xl tw-font-extrabold tw-text-justify">
+                    Senthil Chandran
+                </h3>
+                <h3 class="tw-mt-2 tw-text-[#464143] tw-text-xl tw-text-justify tw-justify-center">
+                    Digital Marketing Team Lead
+                </h3>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">A man who did his MSC digital
+                    marketing, Northumbria university and Interned at London school of
+                    business. Now raging to move our impact on all our Social Media handling. He is a Youtuber with more
+                    than 1300 subscribers creating his impact on the emerging society on digital Marketing. He believes
+                    that even good things need marketing to get it's worth.</p>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]"> His motto: <span
+                        class="tw-font-light">“Don't fear criticism
+                        fear stagnation“</span></p>
+            </div>
+
+        </div>
+
+        <!-- Sam -->
+        <div
+            class="tw-flex tw-flex-col tw-items-center lg:tw-items-start lg:tw-flex-row tw-mt-10 md:tw-mt-20 tw-border-b tw-border-black tw-pb-10">
+            <div class="tw-justify-start lg:tw-w-[220%] tw-mt-10 tw-order-2 ">
+                <h3 class="tw-mt-0 tw-text-[#464143] tw-text-3xl tw-font-extrabold tw-text-justify">
+                    Sam Prabin
+                </h3>
+                <h3 class="tw-mt-2 tw-text-[#464143] tw-text-xl tw-text-justify tw-justify-center">
+                    Software Architect
+                </h3>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">Sam is a Software Architect with a
+                    strong foundation in software engineering and a passion for creating innovative and scalable
+                    solutions. A problem-solver at heart, John thrives in complex technical environments and always
+                    approaches challenges with a can-do attitude. Beyond designing robust system architectures, he also
+                    mentors junior developers and is a key contributor to cross-functional teams at TechNova.</p>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]"> Her motto : <span
+                        class="tw-font-light">“Architecture is not
+                        just about code, it's about crafting the blueprint for future success.”</span>
+                </p>
+            </div>
+
+            <div class="tw-w-[16%] tw-hidden lg:tw-inline"></div>
+
+            <div class="tw-w-[60%] sm:tw-w-[40%] lg:tw-w-[180%] lg:tw-order-2">
+                <img src="./img/yaazh/samPhoto.png" />
+            </div>
+
+        </div>
+
+        <!--  Senthil Chandran -->
+        <div class="tw-flex tw-flex-col tw-items-center lg:tw-items-start lg:tw-flex-row tw-mt-10 md:tw-mt-20 tw-pb-10">
+            <div class="tw-w-[60%] sm:tw-w-[40%] lg:tw-w-[180%]">
+                <img src="./img/yaazh/prakashPhoto.png" />
+            </div>
+
+            <div class="tw-w-[16%] tw-hidden lg:tw-inline"></div>
+
+            <div class="tw-justify-start lg:tw-w-[220%] tw-mt-10">
+                <h3 class="tw-mt-0 tw-text-[#464143] tw-text-3xl tw-font-extrabold tw-text-justify">
+                    Prakash
+                </h3>
+                <h3 class="tw-mt-2 tw-text-[#464143] tw-text-xl tw-text-justify tw-justify-center">
+                    Team Lead
+                </h3>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]">Prakash is a Senior Frontend
+                    Software Engineer with a sharp eye for detail and a deep understanding of user-centric design. Known
+                    for her
+                    ability to balance functionality with seamless UI/UX, she ensures that every project she works on
+                    delivers a polished and engaging experience. Apart from leading frontend development, she
+                    collaborates closely with designers and backend engineers, making her an invaluable asset at
+                    CodeCraft.</p>
+                <p class="tw-text-[#7F787C] tw-mt-10 tw-text-justify lg:tw-w-[80%]"> His motto:<span
+                        class="tw-font-light"> “Building interfaces
+                        isn’t just about visuals, it’s about creating intuitive experiences that connect with
+                        users“</span></p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <div w3-include-html="Footer.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /* Loop through a collection of all HTML elements: */
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+    </script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
